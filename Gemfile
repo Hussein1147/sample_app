@@ -32,6 +32,15 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'spork-rails', github: 'sporkrb/spork-rails'
+group :development, :test do
+  gem 'ZenTest'
+  gem 'autotest-rails-pure'                                             
+  gem 'autotest-fsevent'
+  gem 'autotest'
+  gem 'autotest-growl'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
