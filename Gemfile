@@ -39,6 +39,8 @@ group :development, :test do
   gem 'autotest-fsevent'
   gem 'autotest'
   gem 'autotest-growl'
+  gem 'webrat'
+  gem 'capybara', '~> 2.2.1'
 end
 
 # Use ActiveModel has_secure_password
