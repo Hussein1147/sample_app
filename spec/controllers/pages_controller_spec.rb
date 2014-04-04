@@ -2,6 +2,14 @@ require 'spec_helper'
 
 describe PagesController do
   render_views
+  
+  before(:each) do
+    @base_title = "Zappening, what's happening around you?"
+     
+  end
+  
+  
+  
   describe "GET 'home'" do
     it "returns http success" do
       get 'home'
@@ -10,7 +18,8 @@ describe PagesController do
     
     it "should  be susscessful" do
       get 'home'
-       response.should have_selector('title', :content=>"Zappening, what's happening around you? |Home")
+       response.should have_selector('title',
+                                      :content=>"#{@base_title} |Home")
     end
     it "should have no-blank body" do
       get 'home'
@@ -26,7 +35,8 @@ describe PagesController do
     end
     it "should  be susscessful" do
       get 'contact'
-       response.should have_selector('title', :content=>"Zappening, what's happening around you? |Contact")
+       response.should have_selector('title', 
+                                     :content=>"#{@base_title} |Contact")
     end
   end
   
