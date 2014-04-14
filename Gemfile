@@ -26,7 +26,8 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
+gem 'less-rails'
+gem 'therubyracer'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -41,6 +42,14 @@ group :development, :test do
   gem 'autotest-growl'
   gem 'webrat'
   gem 'capybara', '~> 2.2.1'
+  
+ 
+  gem 'therubyracer'
+end
+group :assets do
+  
+ 
+  gem 'therubyracer'
 end
 
 # Use ActiveModel has_secure_password
