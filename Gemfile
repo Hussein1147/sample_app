@@ -32,6 +32,7 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+gem 'therubyracer'
 
 gem 'spork-rails', github: 'sporkrb/spork-rails'
 group :development, :test do
@@ -45,7 +46,7 @@ group :development, :test do
   gem 'capybara'
   
   
-  gem 'therubyracer'
+  
 end
 group :assets do
   
