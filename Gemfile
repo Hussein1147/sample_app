@@ -46,6 +46,9 @@ group :development, :test do
   gem 'webrat'
   gem 'capybara'
   
+  gem 'protected_attributes'
+  
+  
   
   
 end
