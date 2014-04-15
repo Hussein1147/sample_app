@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.0.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -20,14 +20,14 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
+gem 'inherited_resources'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 gem 'less-rails'
-gem 'therubyracer'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -35,21 +35,22 @@ end
 
 gem 'spork-rails', github: 'sporkrb/spork-rails'
 group :development, :test do
+  gem "rspec-rails", "~> 2.8"
   gem 'ZenTest'
   gem 'autotest-rails-pure'                                             
   gem 'autotest-fsevent'
   gem 'autotest'
   gem 'autotest-growl'
   gem 'webrat'
-  gem 'capybara', '~> 2.2.1'
+  gem 'capybara'
   
- 
+  
   gem 'therubyracer'
 end
 group :assets do
   
  
-  gem 'therubyracer'
+  
 end
 
 # Use ActiveModel has_secure_password
@@ -63,4 +64,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem "rspec-rails", :group => [:development, :test]

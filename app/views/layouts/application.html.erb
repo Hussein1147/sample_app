@@ -3,38 +3,18 @@
        <head>
      	  <title><%= title %></title>
 		  <%= csrf_meta_tag %>
-		  <!--[if lt IE 9]>
-			<script src= "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	      <![endif]-->
-		  <%= stylesheet_link_tag 'screen', :media =>'screen'%>
-		  <%= stylesheet_link_tag 'print', :media => 'print'%>
-		  <!--[if lt IE 8]><%= stylesheet_link_tag 'ie' %><![endif]-->
-		  <%= stylesheet_link_tag 'font', :media=> 'screen'%>
-		  <%=stylesheet_link_tag 'font-awesome.css', :media=>'screen'%>
+		  <%= render 'layouts/stylesheets'%>
 		 
         </head>
-		<header>
-		<div class="container">
-		  <body>
-	  	   	<nav class="round">
-	  			<ul class="nav nav-pills nav-stacked">
-	  			  <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i> Home</a></li>
-	  			  <li><a href="#"><i class="fa fa-sign-in fa-fw"></i> Signin</a></li>
-			  
-	  			  <li><a href="#"><i class="fa fa-exclamation fa-fw"></i> Help</a></li>
-	  			</ul>
+		<body>
+		   <div class="container">
 			
-	  		</nav>
-	     
-			<div class="logo">
-		 	<%= image_tag("Zappening.png", :class=>"round")%>
-		   	
+		        <%=render 'layouts/header' %>
+		        <section class="round">
+   		          <%= yield %>
+		        </section>
+	     <%= render 'layouts/footer'%>
+		   
 	       </div>
-	   
-		 <section class="round">
-   		 <%= yield %>
-		 </section>
-		 </header>
-	     </div>
-          </body>
-          </html>
+        </body>
+  </html>
