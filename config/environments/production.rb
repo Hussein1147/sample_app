@@ -27,7 +27,8 @@ SampleApp::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = True
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+  config.assets.compile =false
 
   # Generate digests for assets URLs.
   config.assets.digest = true
