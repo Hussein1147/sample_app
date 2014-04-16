@@ -28,6 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'less-rails'
 
+ 
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -46,8 +47,7 @@ group :development, :test do
   gem 'webrat'
   gem 'capybara'
   
-  gem 'protected_attributes'
-  
+  gem 'devise', '3.0.0.rc'
   
   
   

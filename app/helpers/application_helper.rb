@@ -10,4 +10,7 @@ module ApplicationHelper
   def logo
     image_tag("Zappening.png", :class=>"round")
   end
+  def d(object)
+      debug object if Rails.env == "development"
+    end
 end
