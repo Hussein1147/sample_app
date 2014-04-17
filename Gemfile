@@ -47,7 +47,7 @@ group :development, :test do
   gem 'autotest-growl'
   gem 'webrat'
   gem 'capybara'
-  
+  gem 'factory_girl_rails'
   gem 'devise', '3.0.0.rc'
   
   

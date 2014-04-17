@@ -130,7 +130,7 @@ describe User do
      end
    end
    describe "autheticate method" do
-     it "shou exit" do
+     it "should exit" do
        User.should respond_to(:authenticate)
      end
      it "should return nil on password/email mismacht" do 
