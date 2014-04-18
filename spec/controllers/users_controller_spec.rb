@@ -15,9 +15,28 @@ render_views
   
   it "should find the right user" do
     get :show, :id =>@user
-    assigns(:user).should == @user
+    assigns(:user).should ==  @user
+  end
+  it "should have the right title" do
+    get :show, :id=> @user
+    response.should have_selector('title', :content=> @user.name)
   end
   
+  it "should have the right user's name" do 
+    get :show, :id =>@user
+    response.should have_selector('h1', :content =>@user.name)
+  end
+  
+  # it "should have a profile image" do
+#     get :show, :id =>@user
+#     response.should have_selector('h1>img', :class=>"gravatar profile-img")
+#   end
+ 
+   it "should have the right url" do 
+     get :show, :id =>@user
+     response.should have_selector('li>a', :content =>user_path(@user),
+                                            :href =>user_path(@user))
+   end 
  end
 
 

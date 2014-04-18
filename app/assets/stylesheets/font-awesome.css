@@ -1380,6 +1380,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 		font-size:120%;
 		padding:20px;
 		background: #fff;
+		width:auto;
 	}
 	section h1{
 		font-size:200%;

@@ -1,1 +1,54 @@
-<%= @user.name%>, <%=@user.email%>
+
+
+<h1>
+<style scoped>
+@font-face{
+	font-family:;
+	src:url(../../fonts/HappyMonkey-Regular.ttf);
+}
+.profile-img{
+	border-radius: 15px;
+	
+}
+.side-bar{
+	text-align:center;
+	border-radius:10px;
+	width:30%;
+	margin-bottom:-15px;
+	margin-left:60%;
+	text-decoration:none;
+	background-color:;
+	border:none;
+}
+#elementStyle li {
+	align:center;
+    padding: ;
+    margin:10px;
+	list-style-type:none;
+	background-color:green;
+	border-radius:20px;
+	color: white;
+	font-family:HappyMonkey-Regular;
+	font-size:30px;
+	
+  }
+   
+</style>
+
+
+<%= gravatar_for @user %>
+
+<%= @user.name %>
+<div class="pure-table pure-table-horizontal side-bar">
+   <ol id="elementStyle">
+    <li><%= @user.name%></li>
+    <td><%= link_to user_path(@user),user_path(@user)%></td> 
+    </ol>
+</div>
+
+	
+
+</h1>
+    
+	
+	
