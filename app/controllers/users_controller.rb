@@ -6,26 +6,23 @@ class UsersController < ApplicationController
     @title = @user.name
   end
   def new
-    @user = User.new
     @title= "Sign up"
+    @user=User.new
     
   end
 
   def create
-    
+    @title ="Sign up"
     @user = User.new(user_params)
     if @user.save
-
-      redirect_to @user, :flash =>{:success=>"Welcome to Zappening?"}
+      flash[:success] = "Welcome to Zappening?"
+      redirect_to @user
     else
-    @title ="Sign up"
-    render 'new'
+      render 'new'
     end
-  end
  
-  
+  end
   private
-  
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
