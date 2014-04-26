@@ -10,8 +10,13 @@
    * This is a compressed file. See the sources in the 'src' directory.
 
 ----------------------------------------------------------------------- */
-
+$flashbg-color:green;
+$flashtxt-color:white;
 /* reset.css */
+@font-face{
+	
+	src:url(../fonts/HappyMonkey-Regular.ttf);
+}
 html {margin:0;padding:0;border:0;}
 body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;}
@@ -96,7 +101,16 @@ form.inline p {margin-bottom:0;}
 .error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
 .error, .alert {background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
 .notice {background:#fff6bf;color:#514721;border-color:#ffd324;}
-.success {background:#e6efc2;color:#264409;border-color:#c6d880;}
+.success {
+	font-size:20px;
+	margin-left:25%;
+	color:$flashtxt-color;
+	width:40%;
+	background:$flashbg-color;
+	border-color:#c6d880; 
+	font-family:HappyMonkey-Regular;
+	text-align:center;
+	border-radius:20px;}
 .info {background:#d5edf8;color:#205791;border-color:#92cae4;}
 .error a, .alert a {color:#8a1f11;}
 .notice a {color:#514721;}

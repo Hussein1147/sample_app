@@ -32,6 +32,10 @@ gem 'less-rails'
 gem 'gravatar_image_tag'
 gem 'jquery-fileupload-rails'
 gem 'paperclip', '~> 3.0'
+gem 'sass-rails', '>= 3.2'
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -56,7 +60,7 @@ group :development, :test do
   
 end
 group :assets do
-   gem 'sass-rails', '~> 4.0.2'
+   
    gem 'coffee-rails', '~> 4.0.0'
    gem 'uglifier', '>= 1.3.0'
    gem 'asset_sync'

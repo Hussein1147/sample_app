@@ -1,3 +1,30 @@
 <h1>Sign up</h1>
 
-<p>Find me in app/views/users/new.html.erb</p>
+<%= form_for(@user) do |f| %>
+	<%= render  'users/shared/error_messages'%>
+	<div class="pure-form"> 
+	<%= f.label :name %></br>
+	<%= f.text_field :name, :class =>'pure-input-rounded user-form'%>
+	</div>
+	
+	<div class="pure-form"> 
+	<%= f.label :email %></br>
+	<%= f.text_field :email, :class =>'pure-input-rounded user-form'%>
+	</div>
+	
+	<div class="pure-form"> 
+	<%= f.label :password %></br>
+	<%= f.password_field :password, :class =>'pure-input-rounded user-form'%>
+    </div>
+	
+	<div class="pure-form"> 
+	<%= f.label :password_confirmation, "Confirmation"%></br>
+	<%= f.password_field :password_confirmation, :class =>'pure-input-rounded user-form'%>
+    </div>
+		<div class="actions"> 
+			
+		<%= f.submit  "Sign up", :class =>'pure-button button-signup'%>
+		
+	   </div>
+	
+<% end %>
