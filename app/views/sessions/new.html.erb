@@ -1,0 +1,30 @@
+<h1>Sign in</h1>
+  		<style scoped>
+
+  		
+  		
+  		</style>
+
+<%= form_for(:session, :url =>sessions_path) do |f| %>
+	
+	<div class="pure-form"> 
+		
+	<%= f.label :email %></br>
+	<%= f.text_field :email, :class =>'pure-input-rounded user-form'%>
+	</div>
+	
+	<div class="pure-form"> 
+	<%= f.label :password %></br>
+	<%= f.password_field :password, :class =>'pure-input-rounded user-form'%>
+    </div>
+	
+	
+		<div class="actions"> 
+			
+		<%= f.submit  "Sign in", :class =>'pure-button button-signup'%>
+		
+	   </div>
+  		
+	   <p class= "new-user-signup">New User? <a class="new-user-signup" href='<%= signup_path%>'> Sign up Now!</p>
+	
+<% end %>

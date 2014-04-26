@@ -6,7 +6,9 @@
  * -------------------------- */
 $form-color:#4CBB17;
 $hover-color:#00CC00;
-
+@font-face{
+	src:url('<%= asset_path("HappyMonkey-Regular.ttf")%>');
+}
 @font-face {
   font-family: "FontAwesome";
   src: url('<%= asset_path("fontawesome-webfont.eot") %>');
@@ -1496,7 +1498,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 	  
 	}
 	
-	/*ERROR MESSAGES*/
+/*ERROR MESSAGES*/
 	.field_with_errors {
 		margin-top:10px;
 		padding:2px;
@@ -1504,10 +1506,10 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 		display: table;
 	}
 	
-.field_with_errors label{
+  .field_with_errors label{
 	color:#fff;
-}
-#error_explanation{
+   }
+  #error_explanation{
 	width:400px;
 	border:2px solid red;
 	border-radius:20px;
@@ -1515,10 +1517,9 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 	padding-bottom:12px;
 	margin-border:20px;
 	background-color:#f0f0f0;
-	
-	
-}	
-#error_explanation h2 {
+	}
+		
+    #error_explanation h2 {
 	text-align:left;
 	font-weight:bold;
 	padding: 5px 5px 5px 15px;
@@ -1528,13 +1529,24 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 	color:#fff;
 	border-top-left-radius:20px;
     border-top-right-radius:20px;
-}	
-#error_explanation p{
+    }	
+   #error_explanation p{
 	color:#333;
 	margin-bottom:auto;
 	padding:5px;
-}
-#error_explanation ul li {
+   }
+   #error_explanation ul li {
 	font-size:12px;
 	list-style:square;
-}
+  }
+ 
+/*Sign IN page Sign UP link*/
+  		.new-user-signup {
+  			font-family: HappyMonkey-Regular;
+			font-size:15px;
+			font-weight:bold;
+			
+  		}
+		.new-user-signup a:hover {
+			color:#00FF00;
+		}
