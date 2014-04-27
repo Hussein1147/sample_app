@@ -1,6 +1,7 @@
-SampleApp::Application.routes.draw do
-  resources :sessions, only: [:new, :create, :destroy]
+SampleApp::Application.routes.draw do 
+  
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   root :to => "pages#home"
   get '/about' => 'pages#about'
