@@ -31,5 +31,34 @@ describe "Users" do
       end.should change(User,:count).by(1)
     end
   end
+  describe "Sign in" do
+    describe "failure" do
+      
+      it "should not sign in the user" do
+        visit signin_path
+        fill_in "Email", :with=>""
+        fill_in "Password", :with=>""
+        click_button
+        response.should have_selector('div.flash.error', :content=>"Invalid")
+        response.should render_template('sessions/new')
+      end
+    end
+    
+    describe "Success" do
+      it "should sign a user in and out" do
+        user =FactoryGirl.create(:user)
+        visit signin_path
+        fill_in "Email", :with=>user.email
+        fill_in "Password", :with=>user.password
+        click_button
+        controller.should be_signed_in
+        click_link "Signout"
+        controller.should_not be_signed_in
+        
+      end
+    end
+    
+    
+  end
 end
 end

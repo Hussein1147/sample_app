@@ -11,7 +11,7 @@ SampleApp::Application.routes.draw do
   get '/signup' => 'users#new'
   
   get '/signin' => 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: 'delete'
+  get '/signout' => 'sessions#destroy'
   
   
   

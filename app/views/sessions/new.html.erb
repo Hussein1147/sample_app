@@ -29,8 +29,9 @@
 	   </div>
 	  
 	   <div class="field checkbox">
-	       
-	       <%= check_box_tag 'remember_me', 'selected'%>
+    <%= label_tag :remember_me %>
+    <%= check_box_tag 'remember_me[]', value ="1", checked =false, options={} %>
+
 	   </div>  
   		
 	   <p class= "new-user-signup">New User? <a class="new-user-signup" href='<%= signup_path%>'> Sign up Now!</p>

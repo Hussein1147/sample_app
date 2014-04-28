@@ -1,5 +1,0 @@
-		  <%= stylesheet_link_tag 'screen', :media =>'screen'%>
-		  <%= stylesheet_link_tag 'print', :media => 'print'%>
-		  <!--[if lt IE 8]><%= stylesheet_link_tag 'ie' %><![endif]-->
-		  <%= stylesheet_link_tag 'font', :media=> 'screen'%>
-		  <%=stylesheet_link_tag 'font-awesome.css', :media=>'screen'%>
